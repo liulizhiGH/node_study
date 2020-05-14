@@ -10,7 +10,8 @@ const server = http.createServer((req, res) => {
   // 打印客户端的请求url
   let myUrl = url.parse(req.url);
   let pathname = myUrl.pathname;
-  let base = "./html";
+  console.log(pathname,"papapap")
+  let base = "./dist";
   let mimeStr = mime.getType(pathname);
   console.log(mimeStr);
   // 忽略favicon
@@ -34,6 +35,6 @@ const server = http.createServer((req, res) => {
 });
 
 // 监听服务的运行
-server.listen(3000, "127.0.0.1", () => {
+server.listen(4000, "127.0.0.1", () => {
   console.log("服务已经运行在127.0.0.1:3000");
 });
